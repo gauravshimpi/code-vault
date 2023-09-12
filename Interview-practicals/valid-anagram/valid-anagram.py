@@ -11,6 +11,9 @@ def is_anagram(s: str, t: str) -> bool:
     str:param s: string with all lower cases.
     bool:return: true if it's valid anagram else not
     """
+    if len(s) != len(t):
+        return False
+
     char_counter = {}
     for ch in s:
         char_counter[ch] = char_counter.get(ch,0) + 1
